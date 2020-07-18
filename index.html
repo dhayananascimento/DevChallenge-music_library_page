@@ -1,8 +1,3 @@
-<!-- Search artists, playlists or tracks
-Featured Playlists
-Profile Views
-Tracks -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +11,7 @@ Tracks -->
 </head>
 <body>
     <div class="container">
-        <div class="lateral">
+        <aside class="lateral">
             <div class="perfil">
                 <img src="./assets/profile.jpg" alt="Ptofile">
                 <div>
@@ -25,7 +20,7 @@ Tracks -->
                 </div>
             </div>
 
-            <div class="navegacao">
+            <nav class="navegacao">
                 <ul>
                     <li><a href="#" class="selecionado"><i class="fa fa-cog"></i> Overview</a></li>
                     <li><a href="#"><i class="fa fa-cog"></i> News</a></li>
@@ -39,9 +34,127 @@ Tracks -->
                     <li><a href="#"><i class="fa fa-bell"></i> Notifications</a></li>
                     <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                 </ul>
+            </nav>
+        </aside>
+
+        <main class="conteudo">
+            <div class="pesquisa">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search artists, playlists or tracks">
             </div>
-        </div>
-        <div class="conteudo"></div>
+
+            <section class="playlists">
+                <h3>Featured Playlists</h3>
+
+                <div class="container-playlist">
+                    <div class="playlist">
+                        <img src="./assets/playlist1.jpg" alt="playlist 01">
+                        <h3>Only STARDUST</h3>
+                        <p>24 tracks</p>
+                    </div>
+                    <div class="playlist">
+                        <img src="./assets/playlist2.jpg" alt="playlist 02">
+                        <h3>Mike Vella</h3>
+                        <p>12 tracks</p>
+                    </div>
+                    <div class="playlist">
+                        <img src="./assets/playlist3.jpg" alt="playlist 03">
+                        <h3>The best singles</h3>
+                        <p>163 tracks</p>
+                    </div>
+                    <div class="playlist">
+                        <img src="./assets/playlist4.jpg" alt="playlist 04">
+                        <h3>Indie</h3>
+                        <p>153 tracks</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="views-track">
+                <section class="views">
+                    <h3>Profile Views</h3>
+
+                    <div class="container-views">
+                        <div class="view">
+                            <img src="./assets/view1.jpg" alt=" view 01">
+                            <div class="info">
+                                <div>
+                                    <h4>Jenny Villa</h4>
+                                    <p>1 day ago</p>
+                                </div>
+
+                                <p>4 albums</p>
+                            </div>
+                        </div>
+
+                        <div class="view">
+                            <img src="./assets/view2.jpg" alt=" view 02">
+                            <div class="info">
+                                <div>
+                                    <h4>Aquila</h4>
+                                    <p>3 days ago</p>
+                                </div>
+
+                                <p>2 albums</p>
+                            </div>
+                        </div>
+
+                        <div class="view">
+                            <img src="./assets/view3.jpg" alt=" view 03">
+                            <div class="info">
+                                <div>
+                                    <h4>This is War</h4>
+                                    <p>2 week ago</p>
+                                </div>
+
+                                <p>5 albums</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="tracks">
+                    <h3>Tracks</h3>
+                    <div class="container-tracks">
+                        <div class="track">
+                            <img src="./assets/track1.jpg" alt="track 01">
+                            <h4>Mahara Bon</h4>
+                            <p>Sexy in Paris</p>   
+                        </div>
+                        <div class="track">
+                            <img src="./assets/track2.jpg" alt="track 02">
+                            <h4>Donna</h4>
+                            <p>Pseudo-Life</p>   
+                        </div>
+                        <div class="track">
+                            <img src="./assets/track3.jpg" alt="track 03">
+                            <h4>Avven</h4>
+                            <p>Magic</p>   
+                        </div>
+                        <div class="track">
+                            <img src="./assets/track4.jpg" alt="track 04">
+                            <h4>This is War</h4>
+                            <p>2 week ago</p>   
+                        </div>
+                        <div class="track">
+                            <img src="./assets/track5.jpg" alt="track 05">
+                            <h4>This is War</h4>
+                            <p>2 week ago</p>   
+                        </div>
+                        <div class="track">
+                            <img src="./assets/track6.jpg" alt="track 06">
+                            <h4>This is War</h4>
+                            <p>2 week ago</p>   
+                        </div>
+                        <div class="track">
+                            <img src="./assets/track7.jpg" alt="track 07">
+                            <h4>This is War</h4>
+                            <p>2 week ago</p>   
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
     </div>
 </body>
 </html>
