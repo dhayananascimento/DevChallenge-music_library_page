@@ -3,10 +3,11 @@
 
 :root {
     --preto: #040517;
-    --branco: #e5e5e7;
     --fundo: #19152f;
-    --branco-opaco: rgba(229,229,231, .3);
+    --branco: #e5e5e7;
     --azul: rgb(32, 15, 86);
+    --scroll-track: rgba(32, 15, 86, .3);
+    --branco-opaco: rgba(229,229,231, .3);
 }
 
 *{
@@ -26,24 +27,26 @@ h3 {
     margin-bottom: 5px;
 }
 
-input::-webkit-input-placeholder {
+
+::-webkit-input-placeholder {
     color: var(--branco-opaco);
  }
   
-input:-moz-placeholder { 
+:-moz-placeholder { 
     color: var(--branco-opaco);  
  }
   
-input::-moz-placeholder {
+::-moz-placeholder {
     color: var(--branco-opaco);  
  }
   
-input:-ms-input-placeholder {  
+:-ms-input-placeholder {  
     color: var(--branco-opaco);  
  }
 
  ::-webkit-scrollbar {
-    width: 2px;
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -52,10 +55,10 @@ input:-ms-input-placeholder {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--preto);
     border-radius: 8px;
-
+    background-color: var(--scroll-track);
 }
+
 
 .container {
     display: grid;
@@ -128,7 +131,7 @@ input:-ms-input-placeholder {
 }
 
 .conteudo {
-    padding: 20px 5px 20px 80px;
+    padding: 20px 15px 20px 80px;
     background-color: var(--fundo);
     overflow-y: auto;
 }
