@@ -24,9 +24,21 @@ body {
 }
 
 h3 {
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
+h4 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+p {
+    opacity: .4;
+    margin-top: 4px;
+    font-size: 12px;
+    transition: opacity .2s;
+}
 
 ::-webkit-input-placeholder {
     color: var(--branco-opaco);
@@ -89,16 +101,9 @@ h3 {
     align-items: center;
 }
 
-.perfil p {
-    opacity: .4;
-    cursor: pointer;
-    font-size: 12px;
-    transition: opacity .2s;
-}
+.perfil p { cursor: pointer;}
 
-.perfil p:hover {
-    opacity: 1;
-}
+.perfil p:hover { opacity: 1;}
 
 .navegacao {
     display: flex;
@@ -153,7 +158,9 @@ h3 {
     background-color: transparent;
 }
 
-.playlists, .views, .tracks {
+.playlists, 
+.views, 
+.tracks { 
     padding-top: 30px;
 }
 
@@ -174,10 +181,6 @@ h3 {
     margin: 20px 20px 20px 0px; 
 }
 
-.playlist p {
-    opacity: 0.4;
-}
-
 .views-track {
     display: flex;
     flex-wrap: wrap;
@@ -193,8 +196,15 @@ h3 {
 }
 
 .view {
+    opacity: .5;
     display: flex;
+    cursor: pointer;
     margin-bottom: 15px;
+    transition: opacity .2s;
+}
+
+.view:hover {
+    opacity: 1;
 }
 
 .view img {
@@ -212,6 +222,7 @@ h3 {
     justify-content: space-between;
 }
 
+
 .tracks {
     width: 400px;
     padding-right: 15px;
@@ -223,7 +234,14 @@ h3 {
 }
 
 .track {
+    opacity: .5;
+    cursor: pointer;
     margin-bottom: 20px;
+    transition: opacity .2s;
+}
+
+.track:hover {
+    opacity: 1;
 }
 
 .track img {
