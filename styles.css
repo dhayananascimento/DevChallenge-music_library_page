@@ -7,7 +7,7 @@
     --branco: #e5e5e7;
     --azul: rgb(32, 15, 86);
     --scroll-track: rgba(32, 15, 86, .3);
-    --branco-opaco: rgba(229,229,231, .3);
+    --branco-opaco: rgba(255,255,255, .4);
 }
 
 *{
@@ -39,6 +39,7 @@ p {
     font-size: 12px;
     transition: opacity .2s;
 }
+
 
 ::-webkit-input-placeholder {
     color: var(--branco-opaco);
@@ -101,9 +102,20 @@ p {
     align-items: center;
 }
 
-.perfil p { cursor: pointer;}
+.perfil p { 
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+}
 
-.perfil p:hover { opacity: 1;}
+.perfil p:hover {
+     opacity: 1;
+}
+
+.perfil svg {
+    margin-left: 10px;
+}
 
 .navegacao {
     display: flex;
@@ -126,13 +138,21 @@ p {
 
 .navegacao ul li a {
     opacity: .4;
+    font-size: 14px;
     text-decoration: none;
     transition: opacity .2s;
+
+    display: flex;
+    align-items: center;
 }
 
 .navegacao ul li a:hover,
 .navegacao ul li a.selecionado {
     opacity: 1;
+}
+
+.navegacao ul li a svg {
+    margin-right: 10px;
 }
 
 .conteudo {
@@ -142,11 +162,13 @@ p {
 }
 
 .pesquisa {
+    display: flex;
+    align-items: center;
     background-color: transparent;
 }
 
-.pesquisa i {
-    color: var(--branco-opaco);
+.pesquisa svg {
+    opacity: .4;
 }
 
 .pesquisa input {

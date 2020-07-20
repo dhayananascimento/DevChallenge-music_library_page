@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <link rel="stylesheet" href="styles.css">
     <title>Music Library Page</title>
 </head>
@@ -18,30 +19,30 @@
                 </figure>
                 <div>
                     <h3>Dany Schudler</h3>
-                    <p>Edit Profile <i class="fa fa-cog"></i></p>
+                    <p>Edit Profile <i data-feather="settings" width="14px" height="14px"></i></p>
                 </div>
             </div>
 
             <nav class="navegacao">
                 <ul>
-                    <li><a href="#" class="selecionado"><i class="fa fa-cog"></i> Overview</a></li>
-                    <li><a href="#"><i class="fa fa-cog"></i> News</a></li>
-                    <li><a href="#"><i class="fa fa-music"></i> Playlists</a></li>
-                    <li><a href="#"><i class="fa fa-cog"></i> Discover</a></li>
+                    <li><a href="#" class="selecionado"><i data-feather="aperture"  width="18px" height="18px"></i> Overview</a></li>
+                    <li><a href="#"><i data-feather="trello" width="18px" height="18px"></i> News</a></li>
+                    <li><a href="#"><i data-feather="music" width="18px" height="18px"></i> Playlists</a></li>
+                    <li><a href="#"><i data-feather="radio" width="18px" height="18px"></i> Discover</a></li>
                 </ul>
 
                 <ul>
-                    <li><a href="#"><i class="fa fa-sliders"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="far fa-cog"></i> Messages</a></li>
-                    <li><a href="#"><i class="fa fa-bell"></i> Notifications</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+                    <li><a href="#"><i data-feather="sliders" width="18px" height="18px"></i> Dashboard</a></li>
+                    <li><a href="#"><i data-feather="message-square" width="18px" height="18px"></i> Messages</a></li>
+                    <li><a href="#"><i data-feather="bell" width="18px" height="18px"></i> Notifications</a></li>
+                    <li><a href="#"><i data-feather="user" width="18px" height="18px"></i> Account</a></li>
                 </ul>
             </nav>
         </aside>
 
         <main class="conteudo">
             <div class="pesquisa">
-                <i class="fa fa-search"></i>
+                <i data-feather="search" width="18px" height="18px"></i>
                 <input type="text" placeholder="Search artists, playlists or tracks">
             </div>
 
@@ -186,5 +187,9 @@
             </section>
         </main>
     </div>
+
+    <script>
+        feather.replace()
+    </script>
 </body>
 </html>
