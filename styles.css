@@ -6,6 +6,7 @@
     --fundo: #19152f;
     --branco: #e5e5e7;
     --azul: rgb(32, 15, 86);
+    --borda: rgba(255,255,255, .1);
     --scroll-track: rgba(32, 15, 86, .3);
     --branco-opaco: rgba(255,255,255, .4);
 }
@@ -128,7 +129,7 @@ p {
     margin-top: 40px;
     list-style: none;
     padding-top: 20px;
-    border-top: 1px solid var(--branco-opaco);
+    border-top: 1px solid var(--borda);
 }
 
 .navegacao ul li {
@@ -210,11 +211,13 @@ p {
     border-radius: 15px; 
     transition: transform .4s;
 }
+
 .playlist img:hover {
     transform: scale(1.2);
 }
 
 .views-track {
+    max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -238,6 +241,31 @@ p {
 
 .view:hover {
     opacity: 1;
+}
+
+.imagem {
+    height: 50px;
+    flex: 0 0 50px;
+    border-radius: 5px; 
+    margin-right: 20px;
+}
+
+.view:nth-child(1) figure {
+    background-image: url("/assets/view1.jpg");
+    background-position: center 2%;
+    background-size: 185%;
+}
+
+.view:nth-child(2) figure {
+    background-image: url("/assets/view2.jpg");
+    background-position: 70% 45%;
+    background-size: 185%;
+}
+
+.view:nth-child(3) figure {
+    background-image: url("/assets/view3.jpg");
+    background-position: center 10%;
+    background-size: 185%;
 }
 
 .view img {
