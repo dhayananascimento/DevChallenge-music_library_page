@@ -5,7 +5,7 @@ O desafio pode ser encontrado no site
 [DevChallange](https://www.devchallenge.com.br/detail/5eeed967c2cfb17d361a5a60).
 
 ## Demo
-<img src="./assets/music.gif" alt= "imagem music library page">     
+<img src="./assets/music-library-page.gif" alt= "imagem music library page">     
 
 ## Linguagens
 * CSS
