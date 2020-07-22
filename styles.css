@@ -14,14 +14,14 @@
 *{
     margin: 0;
     padding: 0;
-    outline: none;
+    outline: 0;
     color: var(--branco);
     box-sizing: border-box;
 }
 
 body {
     height: 100vh;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h3 {
@@ -40,6 +40,7 @@ p {
     font-size: 12px;
     transition: opacity .2s;
 }
+
 
 
 ::-webkit-input-placeholder {
@@ -74,11 +75,14 @@ p {
 }
 
 
+
 .container {
     display: grid;
     grid-template-rows: 100vh;
     grid-template-columns:  270px calc(100vw - 270px);
 }
+
+
 
 .lateral {
     overflow-y: auto;
@@ -90,17 +94,17 @@ p {
     justify-content: space-between;
 }
 
-.lateral img {
+.perfil {
+    display: flex;
+    align-items: center;
+}
+
+.perfil img {
     width: 70px;
     height: 70px;
     object-fit: cover;
     border-radius: 5px; 
     margin-right: 10px;   
-}
-
-.perfil {
-    display: flex;
-    align-items: center;
 }
 
 .perfil p { 
@@ -110,12 +114,27 @@ p {
     align-items: center;
 }
 
-.perfil p:hover {
-     opacity: 1;
-}
-
 .perfil svg {
     margin-left: 10px;
+}
+
+
+.abrir, 
+.fechar {
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    
 }
 
 .navegacao {
@@ -133,7 +152,6 @@ p {
 }
 
 .navegacao ul li {
-    display: block;
     margin: 5px 0px;
 }
 
@@ -147,6 +165,7 @@ p {
     align-items: center;
 }
 
+.perfil p:hover,
 .navegacao ul li a:hover,
 .navegacao ul li a.selecionado {
     opacity: 1;
@@ -156,16 +175,19 @@ p {
     margin-right: 10px;
 }
 
+
+
 .conteudo {
     padding: 20px 15px 20px 80px;
     background-color: var(--fundo);
     overflow-y: auto;
 }
 
+
+
 .pesquisa {
     display: flex;
     align-items: center;
-    background-color: transparent;
 }
 
 .pesquisa svg {
@@ -181,16 +203,26 @@ p {
     background-color: transparent;
 }
 
+
+
+
 .playlists, 
 .views, 
 .tracks { 
     padding-top: 30px;
 }
 
-.container-playlist {
+.container-playlist,
+.container-tracks {
     display: flex;
     overflow-x: auto;
 }
+
+.container-views {
+    padding-top: 20px;
+}
+
+
 
 .playlist {
     padding-bottom: 20px;
@@ -216,8 +248,12 @@ p {
     transform: scale(1.2);
 }
 
+
+
+
 .views-track {
     max-width: 1200px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -227,23 +263,31 @@ p {
     width: 350px;
 }
 
-.container-views {
-    padding-top: 20px;
+.tracks {
+    width: 400px;
+    padding-right: 15px;
 }
 
-.view {
+.view,
+.track {
     opacity: .5;
-    display: flex;
     cursor: pointer;
     margin-bottom: 15px;
     transition: opacity .2s;
 }
 
-.view:hover {
+.view:hover, 
+.track:hover {
     opacity: 1;
 }
 
-.imagem {
+
+
+.view {
+    display: flex;
+}
+
+.view .imagem {
     height: 50px;
     flex: 0 0 50px;
     border-radius: 5px; 
@@ -268,41 +312,11 @@ p {
     background-size: 185%;
 }
 
-.view img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 5px; 
-    margin-right: 20px;
-}
-
-.info {
+.view .info {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-
-.tracks {
-    width: 400px;
-    padding-right: 15px;
-}
-
-.container-tracks {
-    display: flex;
-    overflow-x: auto;
-}
-
-.track {
-    opacity: .5;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: opacity .2s;
-}
-
-.track:hover {
-    opacity: 1;
 }
 
 .track img {
@@ -313,3 +327,65 @@ p {
     margin-right: 20px;
 }
 
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lateral {
+        order: 2;
+        padding: 10px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navegacao {
+        background-color: var(--azul);
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    
+    .abrir {
+        display: block;
+    }
+
+    .conteudo {
+        order: 1;
+        padding: 20px;
+    }
+
+    .tracks {
+        width: 100%;
+        padding-right: 0px;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    h3 {
+        font-size: 16px;
+    }
+
+    .views,
+    .tracks {
+        width: 100%;
+    }
+
+    .abrir {
+        width: 30px;
+        height: 30px;
+    }
+
+    .abrir svg {
+        width: 20px;
+        height: 20px;
+    }
+}
