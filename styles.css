@@ -342,7 +342,7 @@ p {
     }
 
     .navegacao {
-        background-color: var(--azul);
+        background-color: var(--preto);
         position: fixed;
         z-index: 1000;
         left: 0;
@@ -372,6 +372,11 @@ p {
 @media (max-width: 400px) {
     h3 {
         font-size: 16px;
+    }
+
+    .navegacao {
+        align-items: flex-start;
+        padding: 15%;
     }
 
     .views,
